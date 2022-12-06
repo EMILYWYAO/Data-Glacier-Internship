@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+  <font size="+2"> 
+  This website is aimed to predict floral species based on qualitative attributes<br>
+  Please input Sepal Length, Sepal Width, Petal length, and Petal Width<br>
+  Click "Predict" when you are done!
+  </font>
+
+ <div class="login">
+	<h1>Predict Flower Species</h1>
+
+    <form action="{{ url_for('predict')}}"method="post">
+		<input type="text" name="Sepal Length" placeholder="Sepal Length" required="required" />
+        <input type="text" name="Sepal Width" placeholder="Sepal Width" required="required" />
+		<input type="text" name="Petal Length" placeholder="Petal Length" required="required" />
+        <input type="text" name="Petal Width" placeholder="Petal Width" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ resultTXT }}
+
+ </div>
+</body>
+</html>
