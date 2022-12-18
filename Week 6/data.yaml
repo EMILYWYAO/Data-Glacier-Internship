@@ -1,0 +1,5 @@
+fileType: csv
+fileName: nicholeBrown
+readDelimiter: ","
+writeDelimiter: "|"
+columns: ['win', 'y', 'z']
