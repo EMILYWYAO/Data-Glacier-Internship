@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+DOT_Traffic_Speeds_NBE.csv
 
 # C extensions
 *.so
