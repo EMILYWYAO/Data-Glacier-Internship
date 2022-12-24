@@ -1,5 +1,5 @@
 fileType: csv
-fileName: nicholeBrown
+fileName: DOT_Traffic_Speeds_NBE
 readDelimiter: ","
 writeDelimiter: "|"
-columns: ['win', 'y', 'z']
+columns: ['ID', 'SPEED', 'TRAVELTIME', 'STATUS', 'DATAASOF', 'LINKID', 'LINKPOINTS', 'ENCODEDPOLYLINE', 'ENCODEDPOLYLINELVLS', 'OWNER', 'TRANSCOMID', 'BOROUGH', 'LINKNAME']
