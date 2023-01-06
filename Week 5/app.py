@@ -13,7 +13,7 @@ def home():
 def predict():
     try:
         features = [[float(x) for x in request.form.values()]]
-    except:
+    except ValueError:
         return render_template('index.html', resultTXT=f'Oops! Input must be a real number!')
     prediction = model.predict(features)
     out = Labels[list(prediction[0]).index(prediction[0].max())]
