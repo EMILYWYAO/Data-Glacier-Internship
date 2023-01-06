@@ -11,7 +11,10 @@ def home():
 
 @app.route("/predict", methods=['POST'])
 def predict():
-    features = [[float(x) for x in request.form.values()]]
+    try:
+        features = [[float(x) for x in request.form.values()]]
+    except:
+        return render_template('index.html', resultTXT=f'Oops! Input must be a real number!')
     prediction = model.predict(features)
     out = Labels[list(prediction[0]).index(prediction[0].max())]
     return render_template('index.html', resultTXT = f'Flower species is {out}.')
